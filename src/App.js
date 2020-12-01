@@ -1,15 +1,24 @@
 import React from 'react';
-import { SearchForm } from './components';
-import { Welcome } from './pages'
-import {Footer, Header} from './layout'
+import { Welcome, Search } from './pages';
+import { Switch, Route } from 'react-router-dom';
+ import { Header, Footer } from './layouts';
 
 function App() {
     return (
         <div id="app">
-            < Header />
-            < Welcome />
-            < SearchForm />
-            < Footer />
+            <header>
+                < Header />
+            </header>
+
+            <Switch>
+                <Route exact path='/' component={Welcome}></Route>
+                <Route path='/search' component={Search}></Route>
+            </Switch>
+
+            <footer>
+                < Footer />
+            </footer>
+
         </div>
     )
 }

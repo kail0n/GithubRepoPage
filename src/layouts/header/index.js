@@ -1,8 +1,6 @@
 import React from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
 
-
-
 const Header = ({ history }) => {
     return (
         <nav>
