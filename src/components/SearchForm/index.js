@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 
 class SearchForm extends Component {
+    
     handleSubmit = e => {
         e.preventDefault();
-        console.log('Submit')
-    }
+         return ({[this.props.username]: e.target.value});
+        };
+
+    // handleInputChange = e => {
+    //     this.setState({})
+    // }
 
     render() {
         return(
-            <form onSubmit={this.handleSubmit}>
-                <input type="text" placeholder="Enter your username"></input>
+            <form onSubmit={this.handleSubmit} username={""}>
+                <input type="text" placeholder="Enter your username" ></input>
                 <input type="submit" value="Search User"></input>
             </form>
 
@@ -18,4 +24,6 @@ class SearchForm extends Component {
     };   
 };
 
-export default SearchForm;
+const mSTP = state => ({username: state.username});
+
+export default connect(mSTP)(SearchForm);
