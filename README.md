@@ -13,15 +13,16 @@ NB: This usage of the GitHub API does not require authentication
 
 ## INSTALLATION
 
-    Clone or download the repo.
-    Open terminal
-    Run npm install to install dependencies.
+Clone or download the repo.
+Open terminal
+Run npm install to install dependencies.
 
 ## USAGE
 
-    Run npm start to launch server and react app.
-    Run npm test to launch test suite.
-    To get all the dependencies please make sure you run < npm install/>
+Run npm start to launch server and react app.
+Run npm test to launch test suite.
+To get all the dependencies please make sure you run 
+    < npm install/>
 
 ## CHANGELOG
 
