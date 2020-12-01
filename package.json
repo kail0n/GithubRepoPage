@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-cli serve --mode development --config webpack.config.dev.js",
+    "start": "webpack-cli serve --mode development --config config/webpack.config.dev.js",
     "build": "webpack -p",
     "test": "jest --watch --silent --setupFiles ./src/test/setupTests.js",
     "coverage": "jest --silent --setupFiles ./src/test/setupTests.js --coverage --watchAll=false"
