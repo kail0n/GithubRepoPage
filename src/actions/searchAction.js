@@ -1,4 +1,18 @@
-export default addUsername = e => ({ // imagine this being triggered in a form submit flow, receiving the form event
-    type: "ADD_A_USERNAME",
-    payload: { username: e.target.value }
-})
+// export default addUsername = e => ({ 
+//     type: "ADD_A_USERNAME",
+//     payload: { username: e.target.value }
+// })
+
+
+export async function fetchUserProfile(inputValue) {
+    try {
+        const resp = await fetch(`https://api.github.com/users/${inputValue}/repos`);
+        const data = await resp.json();
+        if (data.status === 404) { throw Error(err.message) }
+        return data[0].name;
+    } catch(err) {
+        throw new Error(err.message)
+    }
+}
+
+

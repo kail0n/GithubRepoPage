@@ -1,29 +1,36 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import { fetchUserProfile } from '../../actions/searchAction.js';
+ 
 
-
+let userRepos = [];
 class SearchForm extends Component {
-    
+    state = {username:""}
+
     handleSubmit = e => {
         e.preventDefault();
-         return ({[this.props.username]: e.target.value});
-        };
+        const userRepos = fetchUserProfile(this.state.username)
+        console.log(userRepos)
+        }
 
-    // handleInputChange = e => {
-    //     this.setState({})
-    // }
+    handleInputChange = e => {
+        const username = e.target.value
+        this.setState({ username }) 
+        }
 
     render() {
         return(
-            <form onSubmit={this.handleSubmit} username={""}>
-                <input type="text" placeholder="Enter your username" ></input>
+            <form onSubmit={this.handleSubmit}>
+                <input id="textInput" type="text" placeholder="Enter your username" value={this.username} onChange={this.handleInputChange}></input>
                 <input type="submit" value="Search User"></input>
+                <div> {userRepos.map((repo) => {
+                  return (<li key={repo}>{repo}</li>)})
+                  }
+                </div>
             </form>
+        )
+    }
+    
+}
 
-        );
-    };   
-};
 
-const mSTP = state => ({username: state.username});
-
-export default connect(mSTP)(SearchForm);
+export default (SearchForm)
