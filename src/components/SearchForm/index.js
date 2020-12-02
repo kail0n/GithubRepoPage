@@ -1,24 +1,12 @@
 import React, { Component } from 'react';
-// import { fetchUserProfile } from '../../actions/searchAction.js';
+import { RepoResults } from '..';
+
 
 class SearchForm extends Component {
     state = {
         username:"",
         userRepos: []
         }
-
-    // handleSubmit = e => {
-    //     e.preventDefault();
-    //     const inputValue = this.state.username;
-    //      async const try {
-    //         const resp = await fetch(`https://api.github.com/users/${inputValue}/repos`);
-    //         const data = await resp.json();
-    //         // if (data.status === 404) { throw Error(err.message) }
-    //         console.log("this is: ", data)
-    //         this.setState({ userRepos : data });   
-    //     } catch(err) {
-    //         throw new Error(err.message)
-    //     }
         
         handleSubmit = e => {
             e.preventDefault();
@@ -46,12 +34,13 @@ class SearchForm extends Component {
                     <input id="textInput" type="text" placeholder="Enter your username" value={this.username} onChange={this.handleInputChange}></input>
                     <input type="submit" value="Search User"></input>
                 </form>
-                {/* <div> {this.state.userRepos}</div> */}
+                <RepoResults repos={this.state.userRepos} />
             </>
         )
     }
     
 }
+
 
 
 

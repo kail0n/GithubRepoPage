@@ -6,7 +6,6 @@ function Search() {
     return (
         <div id="Search">
             < SearchForm />
-            < RepoResults />
         </div>
     )
 }
