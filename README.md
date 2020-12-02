@@ -22,48 +22,7 @@ Run npm install to install dependencies.
 Run npm start to launch server and react app.
 Run npm test to launch test suite.
 To get all the dependencies please make sure you run 
-    < npm install/>
+< npm install/>
 
-## CHANGELOG
-
-__mocks__
-[x] add fileMock and styleMock for jest
-
-index.html
-[x] add <div id='root'></div>
-
-NavBar
-[x] add history.goBack method onClick of back button
-[x] export withRouter
-
-SearchBar
-[x] add onChange={this.updateInput} for text input form (state.location updates)
-[x] add e.preventDefault() to handleSubmit function
-
-Reducers
-[x] add default return state in searchReducer
-
-App.js
-[x] import About, Search and Welcome pages
-[x] add component props to <Route>s (exact path='/' for root)
-
-index.js
-[x] add Provider tags
-[x] fix <BrowserRouter> to <Router>
-
-## BUGS
-
-SearchForm
-[] try to connect Search (page) and SearchForm unsuccessfully --> state updates in SearchForm but not in Redux store/Search page
-[] try mSTP connect unsuccessfully
-[] tests are not passing 
-[] WDS says disconnected some of the time?
-
-## WINS
-    - mounting the website and seeing different pages via navbar
-    - back button working
-
-## CHALLENGES
-    - search functionality
-
- 
+### Further functions:
+- display API calls
