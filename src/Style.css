@@ -1,0 +1,33 @@
+
+.navbar{
+width:100%;
+background:blue;
+display: inline-flex;
+justify-content: space-around;
+text-align: center;
+margin: 10px 0;
+}
+
+.navlink {
+    height:20px;
+    margin:auto;
+}
+
+  #back-button {
+   
+    height:20px;
+    margin:auto;
+}
+
+
+
+a{
+    text-decoration:none;
+    color:white;
+}
+
+#app{
+    width: 90%;
+    margin: auto;
+}
+

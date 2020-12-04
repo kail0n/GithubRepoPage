@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () =>{
     return (
-        <span>I am the footer</span>
+        <span>Project created by Kai and Paola | December 2020</span>
         )
 } 
 
